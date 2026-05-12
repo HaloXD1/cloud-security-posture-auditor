@@ -14,6 +14,8 @@ Streamlit Cloud URL: _add after deployment._
 
 The dashboard bootstraps synthetic snapshots and scan outputs automatically if generated files are missing.
 
+![Cloud Security Dashboard](dashboard/screenshots/cloud_security_dashboard.png)
+
 ## Architecture
 
 ```mermaid

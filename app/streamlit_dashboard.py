@@ -51,7 +51,7 @@ with tab_exec:
     with left:
         st.plotly_chart(px.bar(summary, x="severity", y="finding_count", color="severity"), width="stretch")
     with right:
-        st.plotly_chart(px.bar(scorecard, x="environment", y="security_score", color="account_id"), width="stretch")
+        st.plotly_chart(px.bar(scorecard, x="environment", y="security_score", color="environment"), width="stretch")
     st.dataframe(scorecard, width="stretch", hide_index=True)
 
 with tab_critical:
