@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
+from contextlib import closing
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -220,9 +221,10 @@ def _write_outputs(
     scorecard.to_csv(paths["account_scorecard"], index=False)
     database_path = project_path(settings["paths"]["findings_db"])
     ensure_parent(database_path)
-    with sqlite3.connect(database_path) as connection:
+    with closing(sqlite3.connect(database_path)) as connection:
         findings.to_sql("findings", connection, if_exists="replace", index=False)
         summary.to_sql("risk_summary", connection, if_exists="replace", index=False)
         scorecard.to_sql("account_scorecard", connection, if_exists="replace", index=False)
+        connection.commit()
     paths["database"] = database_path
     return paths
