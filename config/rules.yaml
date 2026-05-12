@@ -1,0 +1,66 @@
+rules:
+  - rule_id: IAM_MFA_DISABLED
+    severity: high
+    compliance_tag: IAM
+    explanation: IAM user has console access risk without MFA.
+    remediation: Enable MFA for the user or remove interactive access.
+  - rule_id: IAM_OLD_ACCESS_KEY
+    severity: medium
+    compliance_tag: IAM
+    explanation: IAM access key is older than the rotation threshold.
+    remediation: Rotate the key and remove unused credentials.
+  - rule_id: IAM_DIRECT_ADMIN_POLICY
+    severity: critical
+    compliance_tag: IAM
+    explanation: Administrative permissions are attached directly to a user.
+    remediation: Use least-privilege role-based access instead of direct admin user policies.
+  - rule_id: IAM_WILDCARD_PERMISSION
+    severity: high
+    compliance_tag: IAM
+    explanation: IAM policy grants wildcard actions or resources.
+    remediation: Replace wildcard permissions with explicit allowed actions and resources.
+  - rule_id: IAM_OPEN_TRUST_POLICY
+    severity: critical
+    compliance_tag: IAM
+    explanation: Role trust policy allows overly broad principals.
+    remediation: Restrict trusted principals to specific account, role, or service identities.
+  - rule_id: S3_PUBLIC_BUCKET
+    severity: critical
+    compliance_tag: storage
+    explanation: S3 bucket is publicly exposed.
+    remediation: Block public access and review bucket policies.
+  - rule_id: S3_ENCRYPTION_DISABLED
+    severity: high
+    compliance_tag: encryption
+    explanation: S3 bucket does not enforce encryption at rest.
+    remediation: Enable default server-side encryption.
+  - rule_id: S3_VERSIONING_DISABLED
+    severity: medium
+    compliance_tag: storage
+    explanation: S3 bucket versioning is disabled.
+    remediation: Enable versioning for recovery and change tracking.
+  - rule_id: SG_RISKY_PUBLIC_INGRESS
+    severity: critical
+    compliance_tag: network
+    explanation: Security group exposes a risky port to the public internet.
+    remediation: Restrict ingress to trusted CIDR ranges or private connectivity.
+  - rule_id: RDS_PUBLIC
+    severity: critical
+    compliance_tag: network
+    explanation: Database is publicly accessible.
+    remediation: Disable public accessibility and place the database in private subnets.
+  - rule_id: CLOUDTRAIL_DISABLED
+    severity: high
+    compliance_tag: logging
+    explanation: Account-level audit logging is disabled.
+    remediation: Enable CloudTrail-style logging for all regions.
+  - rule_id: GUARDDUTY_DISABLED
+    severity: medium
+    compliance_tag: logging
+    explanation: Threat detection flag is disabled.
+    remediation: Enable GuardDuty-style detection or equivalent monitoring.
+  - rule_id: VOLUME_UNENCRYPTED
+    severity: high
+    compliance_tag: encryption
+    explanation: Storage volume is not encrypted.
+    remediation: Encrypt the volume or migrate data to encrypted storage.
