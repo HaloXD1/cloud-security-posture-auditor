@@ -9,8 +9,6 @@ htmlcov/
 data/snapshots/*.json
 data/exports/*.csv
 data/findings/*.db
-docs/security_report.md
-docs/remediation_plan.md
 !data/snapshots/.gitkeep
 !data/exports/.gitkeep
 !data/findings/.gitkeep
