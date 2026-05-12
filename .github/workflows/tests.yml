@@ -1,0 +1,41 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+
+      - name: Lint
+        run: ruff check .
+
+      - name: Format
+        run: ruff format --check .
+
+      - name: Tests
+        run: pytest --cov=src/cloud_audit --cov-report=term-missing --cov-fail-under=85
+
+      - name: CLI smoke
+        run: |
+          cloud-audit generate-snapshots
+          cloud-audit scan --source snapshots
+          cloud-audit export-report
+          cloud-audit validate-rules
+          cloud-audit health-check
+
+      - name: Dashboard bootstrap smoke
+        run: python -c "from cloud_audit.bootstrap import ensure_demo_outputs; ensure_demo_outputs()"
