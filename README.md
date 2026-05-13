@@ -10,7 +10,7 @@ This project uses offline synthetic JSON snapshots by default. No real AWS crede
 
 ## Live Demo
 
-Streamlit Cloud URL: _add after deployment._
+Streamlit Cloud URL: https://ahmed-cloud-security-auditor.streamlit.app/
 
 The dashboard bootstraps synthetic snapshots and scan outputs automatically if generated files are missing.
 

@@ -4,9 +4,13 @@ Future changes are tracked as small issues and reviewed through focused PRs.
 
 ## Next
 
-- Deploy Streamlit demo and add the live URL.
 - Add CIS-style rule mapping.
 - Add SARIF export for security tooling compatibility.
+
+## Done
+
+- Deployed Streamlit demo: https://ahmed-cloud-security-auditor.streamlit.app/
+- Added live URL to README.
 
 ## Later
 
