@@ -77,8 +77,6 @@ pytest --cov=src/cloud_audit --cov-report=term-missing --cov-fail-under=85
 - [Rules reference](docs/rules_reference.md)
 - [Security report](docs/security_report.md)
 - [Remediation plan](docs/remediation_plan.md)
-- [Interview guide](docs/interview_guide.md)
-- [AWS live mode later](docs/aws_live_mode_later.md)
 
 ## CV Bullets
 

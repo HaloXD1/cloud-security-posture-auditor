@@ -12,3 +12,8 @@ data/findings/*.db
 !data/snapshots/.gitkeep
 !data/exports/.gitkeep
 !data/findings/.gitkeep
+
+# Internal planning / prep notes kept local only.
+docs/ROADMAP.md
+docs/aws_live_mode_later.md
+docs/interview_guide.md
