@@ -1,6 +1,6 @@
 # Cloud Security Posture Auditor
 
-[![Tests](https://github.com/HaloXD1/cloud-security-posture-auditor/actions/workflows/tests.yml/badge.svg)](https://github.com/HaloXD1/cloud-security-posture-auditor/actions/workflows/tests.yml)
+[![Tests](https://github.com/AhmedYasserShalaby/cloud-security-posture-auditor/actions/workflows/tests.yml/badge.svg)](https://github.com/AhmedYasserShalaby/cloud-security-posture-auditor/actions/workflows/tests.yml)
 
 Cloud security automation portfolio project that scans synthetic AWS-style account snapshots for IAM, S3, security group, database, encryption, and logging risks.
 
