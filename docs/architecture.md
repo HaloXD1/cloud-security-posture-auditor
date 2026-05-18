@@ -1,6 +1,6 @@
 # Architecture
 
-The project is intentionally offline-first so it is safe to publish and easy for recruiters to run.
+The project is intentionally offline-first so it is safe to publish and easy to run locally.
 
 ```mermaid
 flowchart TD
@@ -23,7 +23,7 @@ flowchart TD
 - `data/snapshots`: generated synthetic AWS-style JSON account snapshots.
 - `src/cloud_audit/scan.py`: evaluates snapshots, creates findings, scores risk, exports reports.
 - `src/cloud_audit/health.py`: verifies required exports, score thresholds, and count integrity.
-- `app/streamlit_dashboard.py`: recruiter-facing dashboard that bootstraps demo outputs.
+- `app/streamlit_dashboard.py`: Streamlit dashboard that bootstraps demo outputs.
 
 ## Public Safety
 

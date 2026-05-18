@@ -78,7 +78,7 @@ pytest --cov=src/cloud_audit --cov-report=term-missing --cov-fail-under=85
 - [Security report](docs/security_report.md)
 - [Remediation plan](docs/remediation_plan.md)
 
-## CV Bullets
+## Project Summary
 
 - Built a cloud security posture auditor that scans AWS-style IAM, storage, network, encryption, and logging configurations using YAML policy rules and Python automation.
 - Implemented risk scoring, severity-based findings, remediation reports, and a Streamlit dashboard for identifying public exposure, weak IAM controls, missing encryption, and logging gaps.
